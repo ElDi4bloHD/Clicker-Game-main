@@ -3,42 +3,49 @@
         "id": "0",
         "name" : "Sesamo",
         "price" : 15,
-        "rateo": 0.1
+        "rateo": 0.1,
+        "level" : 0
     },
     {
         "id": "1",
         "name" : "Hamburger",
         "price": 100,
-        "rateo": 1
+        "rateo": 1,
+        "level" : 0
     },
     {
         "id": "2",
         "name" : "Lattuce",
         "price" : 1100,
-        "rateo": 8
+        "rateo": 8,
+        "level" : 0
     },
     {
         "id": "3",
         "name" : "Ketchup",
         "price" : 12000,
-        "rateo": 47
+        "rateo": 47,
+        "level" : 0
     },
     {
         "id": "4",
         "name" : "Bacon",
         "price" : 130000,
-        "rateo": 260
+        "rateo": 260,
+        "level" : 0
     },
     {
         "id": "5",
         "name" : "Onions",
         "price" : 1400000,
-        "rateo": 1400
+        "rateo": 1400,
+        "level" : 0
     },
     {
         "id": "6",
         "name" : "Mozzarella",
         "price" : 20000000,
-        "rateo": 7800
+        "rateo": 7800,
+        "level" : 0
     }
 ]

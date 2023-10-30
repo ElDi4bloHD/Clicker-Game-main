@@ -37,6 +37,7 @@ fetch('./object.json')
             console.log(jsonObj[i]);
             const button = document.createElement("button");
             const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [i])) || parseFloat(jsonObj[i]["price"]);
+            const level = parseFloat(localStorage.getItem('levelitem' + [i])) || parseFloat(jsonObj[i]["level"]);
             console.log(jsonObj[i]["name"] + prezzo.toFixed(1) + "$")
             button.textContent = jsonObj[i]["name"] + " " + prezzo.toFixed(1) + " $";
             button.addEventListener('click', createCallback(i));
@@ -48,12 +49,15 @@ function createCallback(index) {
     return function() {
         const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [index])) || parseFloat(jsonObj[index]["price"]);
         const rateo = parseFloat(jsonObj[index]["rateo"]);
+        const level = parseFloat(localStorage.getItem('levelitem' + [index])) || parseFloat(jsonObj[index]["level"]);
         if(parseInt(counter.innerHTML) >= prezzo){
             const prezzoAggiornato = aggiornaPrezzo(prezzo);
+            const levelAggiornato = aggiornaLevel(level);
             console.log(prezzoAggiornato)
             for(i = 0; i < jsonObj.length; i++){
                 localStorage.setItem('buttonPrize' + [index], prezzoAggiornato.toFixed(1));
-                buttonContainer.children[index].textContent = jsonObj[index]["name"] + " " + parseFloat(localStorage.getItem('buttonPrize' + [index])).toFixed(1) + " $";
+                localStorage.setItem('levelitem' + [index], levelAggiornato.toFixed(1));
+                buttonContainer.children[index].textContent = parseFloat(localStorage.getItem('levelitem' + [index])).toFixed(0) + " " + jsonObj[index]["name"] + " " + parseFloat(localStorage.getItem('buttonPrize' + [index])).toFixed(1) + " $";
             }
             oggettoComprato(prezzoAggiornato, rateo);
             x = x - prezzo;
@@ -123,4 +127,9 @@ function reset(){
     }
     counter.innerHTML = 0;
     rateoAlSecondo.innerHTML = 0;
+}
+
+function aggiornaLevel(level){
+    levelAggiornato = level + 1;
+    return levelAggiornato;
 }
