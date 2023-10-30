@@ -12,7 +12,7 @@ objectShop = document.getElementById("shop");
 rateoAlSecondo = document.getElementById("al-secondo");
 buttonContainer = document.getElementById('shop');
 jsonObj = [];
-const moltiplicatore = 1.15;
+const moltiplicatore = 1.16;
 
 let x = 0;
 let rat = 0;
