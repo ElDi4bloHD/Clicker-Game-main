@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div>
+        <button class="img-button" id="button-clicker" onclick="incrementByMouse()"></button>
+        <h2 id="counter">0</h2>
+
+        <p style="display:inline;">
+            <span id="al-secondo">0</span>
+            <span>/s</span>
+        </p>
+    </div>
+
+    <div class="buttons-shop" id="shop"></div>
+
+    <button onclick="reset()">Reset</button>
+
+    <script src="index.js"></script>
+</body>
+</html>

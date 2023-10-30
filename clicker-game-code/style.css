@@ -1,0 +1,64 @@
+body {
+  background-color: #f6f6f6;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+div {
+  margin-top: 50px;
+}
+
+.img-button {
+  background-color: #f6f6f6;
+  background-image: url('assets/bread.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.img-button:active {
+  transform: scale(1.2);
+}
+
+h2 {
+  color: #666;
+  font-size: 48px;
+  margin-top: 50px;
+}
+
+.buttons-shop {
+  margin-top: 50px;
+}
+
+.buttons-shop button {
+  background-color: #337ab7;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttons-shop button:hover {
+  background-color: #286090;
+}
+
+button {
+  background-color: #d9534f;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+  
+  
+  
+  
+  
